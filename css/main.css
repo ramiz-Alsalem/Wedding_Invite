@@ -1,0 +1,262 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --main-color: #f05f75;
+    --secondary-color: #a4afb7
+}
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: hidden;
+}
+@media (min-width: 768px) {
+    .container {
+        width: 750px
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 970px
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px
+    }
+}
+body {
+    font-family: "cairo";
+}
+body > .container .text {
+    text-align: center;
+    margin-top: 30px;
+}
+body > .container .text h2 {
+    letter-spacing: 6px;
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+body > .container .text h2 + p {
+    color: #777;
+    text-transform: uppercase;
+    font-size: 11px;
+    margin-bottom: 20px;
+}
+body > .container .text .icon i {
+    color: #777;
+    font-size: 20px;
+}
+body > .container .container {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+@media (max-width: 767px) {
+    body > .container .container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+body > .container .container > div {
+    flex-basis: calc(80% / 3);
+    position: relative;
+}
+@media (max-width: 767px) {
+    body > .container .container > div {
+        margin-bottom: 60px;
+    }
+}
+body > .container .container .image {
+    width: 120px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 2px solid white;
+    outline: 0.5px #e4e4e4 solid;
+    border-top: 14px solid white;
+    position: relative;
+    margin-bottom: 40px;
+    text-align: center;
+    margin: auto;
+}
+body > .container .container .image::after {
+    content: '';
+    border: solid 7px;
+    position: absolute;
+    border-color: white transparent transparent;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+body > .container .container .box:nth-of-type(1) .image::after {
+    content: '';
+    border: solid 9px;
+    position: absolute;
+    border-color: white transparent transparent;
+    bottom: -17px;
+    left: 51%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+body > .container .container .image span:nth-of-type(1):after {
+    content: '';
+    position: absolute;
+    width: 9px;
+    height: 1px;
+    background-color: #e4e4e4;
+    bottom: -6px;
+    left: 48%;
+    transform: translateX(-50%) rotate(45deg);
+    -webkit-transform: translateX(-50%) rotate(45deg);
+    -moz-transform: translateX(-50%) rotate(45deg);
+    -ms-transform: translateX(-50%) rotate(45deg);
+    -o-transform: translateX(-50%) rotate(45deg);
+}
+body > .container .container .image span:nth-of-type(2):after {
+    content: '';
+    position: absolute;
+    width: 9px;
+    height: 1px;
+    background-color: #e4e4e4;
+    bottom: -6px;
+    left: 53%;
+    transform: translateX(-50%) rotate(-45deg);
+    -webkit-transform: translateX(-50%) rotate(-45deg);
+    -moz-transform: translateX(-50%) rotate(-45deg);
+    -ms-transform: translateX(-50%) rotate(-45deg);
+    -o-transform: translateX(-50%) rotate(-45deg);
+}
+body > .container .container img {
+    width: 100px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+body > .container .container img:after {
+    content: "54654654";
+    position: absolute;
+    background-color: #f05f75;
+}
+body > .container .container > .box .name {
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--main-color);
+    text-transform: capitalize;
+    font-variant: small-caps;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    margin-top: 30px;
+}
+body > .container .container > .box .line {
+    position: relative;
+}
+body > .container .container > .box p:nth-of-type(2) {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #777;
+    font-size: 12px;
+    position: relative;
+    margin-bottom: 20px;
+}
+body > .container .container > .box p:nth-of-type(2)::after {
+    content: " ";
+    position: absolute;
+    width: 100px;
+    height: 1px;
+    background-color: #e3e2e2;
+    bottom: 1px;
+    right: -2px
+}
+body > .container .container > .box p:nth-of-type(2)::before {
+    content: " ";
+    position: absolute;
+    width: 100px;
+    height: 1px;
+    background-color: #e3e2e2;
+    bottom: 1px;
+    left: -2px
+}
+@media (max-width: 767px) {
+    body > .container .container > .box P::after,
+    body > .container .container > .box p:nth-of-type(2)::before {
+        display: none;
+    }
+}
+body > .container .container > .box .icons-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+body > .container .container > .box .icons-container i {
+    color: #eae9e9;
+}
+body > .container .container > .box .icons-container i:not(:first-child){
+    margin-left: 10px;
+}
+body > .container .container > .box .icons-container + p {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-top: 20px;
+    overflow: hidden;
+    color: #909090;
+}
+body > .container .container > .box2 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-transform: uppercase;
+    color: #777;
+    font-weight: 500;
+    margin: 0 20px;
+}
+body > .container .container > .box2 p {
+    flex-basis: 100%;
+}
+body > .container .container > .box2 > div {
+    width: calc(90% / 2);
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border: solid 2px var(--main-color);
+    height: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: -20px;
+}
+body > .container .container > .box2 > div .number {
+    font-size: 30px;
+    color: var(--main-color);
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-weight: 700;
+}
+body > .container .container > .box2 > div .line {
+    width: 70%;
+    margin: 0px auto 20px;
+    height: 1px;
+    border-bottom: 1px dotted  #e3e2e2;;
+}
+body > .container .container > .box2 > div .line + p {
+    margin-bottom: 20px;
+}
